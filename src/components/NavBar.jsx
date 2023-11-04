@@ -1,5 +1,5 @@
 import React from 'react'
-import  '../../App.css';
+
 
 function NavBar() {
   return (
@@ -15,7 +15,7 @@ function NavBar() {
             <a href="/contact">Contact</a>
         </div>
         <div className="navbar-login">
-            <button>Login</button>
+            <button>Log in</button>
         </div>
     </div>
   )
