@@ -4,8 +4,7 @@ import Lightening from '../assets/images/lightening.svg';
 import PaperPlane from "../assets/images/paper-plane.svg";
 import Eye from "../assets/images/eye.svg";
 
-function DetailedServiceDescription() {
-    const cardData=
+         const cardData=
         [
             {img:Lightening,
              alt:"lightening",
@@ -23,12 +22,16 @@ function DetailedServiceDescription() {
              content:"Hold tight! In just 48 hours, you'll get your first peek at your completed design. And if it's not love at first sight, no worries! We can tweak and tune it until it's just right - that's the beauty of unlimited revisions.",
             },
         ];
+
+function DetailedServiceDescription() {
   return (
     <div className="DetailedServiceDescription">
     <h1>How it works</h1>
-    <DescriptionCard />
-    <DescriptionCard/>
-    <DescriptionCard/>
+    <div className='cards-container'>
+   {cardData.map( (data,index) => (
+    <DescriptionCard key={index} img={data.img} alt={data.alt} title={data.title} content={data.content}/>
+   ))}
+   </div>
 
     </div>
   )
