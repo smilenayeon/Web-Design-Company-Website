@@ -204,11 +204,16 @@
     margin:5% 10% auto 10%;
   }
 
-  /****************************************Providing services*****/
+  /****************************************Providing services section*****/
   .providing-services-section{
     background-color: #f7cb46;
     padding:5%;
     position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .providing-services-section::before{
@@ -223,5 +228,66 @@
 
 
   .providing-services-section > h1 {
-    margin:0;
+    margin-top:0;
+    font-size: 2.5rem;
+  }
+
+  .service-box{
+    background-color:white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0;
+    gap:3rem;
+    width:70%;
+    border:3px solid black;
+    box-shadow: 0 5px 0px black;
+  }
+
+  .providing-service-card {
+    width:25%;
+  }
+
+  .providing-service-card-title{
+    text-align: left;
+    font-size: 2.5rem;
+  }
+
+  .providing-service-card-item{
+    text-align:left;
+    list-style-position:inside;
+  }
+
+  .list{
+    padding:0;
+  }
+
+
+  .class2 .providing-service-card-item{
+    list-style:none;
+  }
+
+  /****************************************************membership-benefit-section**************/
+  .membership-benefit-section{
+    background-color: white;
+    height:100vh;
+    position:relative;
+  }
+
+  .membership-benefit-section::before{
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: 0;
+      width: 100%;
+      height:70px;
+      background-image: url("../src//assets/images/yellow-white-wave.svg");
+      background-repeat: repeat-x;
+    }
+
+  .memebership-benefits-table{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:3 (1fr);
   }

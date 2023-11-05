@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import ServiceDescription from './components/ServiceDescription';
 import DetailedServiceDescription from './components/DetailedServiceDescription';
 import ProvidingServices from './components/ProvidingServices';
+import MemebershipBenefit from './components/MemebershipBenefit';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ServiceDescription/>
       <DetailedServiceDescription/>
       <ProvidingServices/>
+      <MemebershipBenefit/>
     </div>
   );
 }
