@@ -244,7 +244,7 @@
     border:3px solid black;
     box-shadow: 0 5px 0px black;
   }
-
+  /****************************************Providing services card section*****/
   .providing-service-card {
     width:25%;
   }
@@ -286,8 +286,44 @@
       background-repeat: repeat-x;
     }
 
+    .membership-benefit-section >h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      padding-top:5%;
+      margin-bottom:5%;
+    }
+
   .memebership-benefits-table{
     display: grid;
+    gap:3rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows:3 (1fr);
+    margin:1% 10%;
   }
+  /****************************************************membership-benefit- card section**************/
+  
+  .membership-benefit-card-image{
+    border:2px solid black;
+    border-radius: 20px;
+    width:100%;
+    box-shadow:0 5px 0 rgb(185, 184, 184);
+    
+  }
+
+  .mebership-benefit-card-content{
+    padding-right: 15%;
+  }
+
+.previous-clients {
+  text-align: center;
+  font-weight: 700;
+  color:rgb(161, 157, 157);
+  padding:4% 0;
+}
+
+.logos{
+  display:flex;
+  justify-content: center;
+  gap:2rem;
+  margin: 3% 0;
+}
