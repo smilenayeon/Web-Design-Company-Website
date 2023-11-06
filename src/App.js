@@ -8,6 +8,7 @@ import ProvidingServices from './components/ProvidingServices';
 import MemebershipBenefit from './components/MemebershipBenefit';
 import PreviousWork from './components/PreviousWork';
 import MoreExamples from './components/MoreExamples';
+import Review from './components/Review';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <MemebershipBenefit/>
       <PreviousWork/>
       <MoreExamples/>
+      <Review/>
     </div>
   );
 }
