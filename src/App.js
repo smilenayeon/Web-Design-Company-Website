@@ -9,6 +9,7 @@ import MemebershipBenefit from './components/MemebershipBenefit';
 import PreviousWork from './components/PreviousWork';
 import MoreExamples from './components/MoreExamples';
 import Review from './components/Review';
+import Pricing from './components/Pricing';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <PreviousWork/>
       <MoreExamples/>
       <Review/>
+      <Pricing/>
     </div>
   );
 }
