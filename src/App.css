@@ -575,20 +575,103 @@
   /******************************************************************price-section***************/
   .price-section{
     display: flex;
-    gap:10%;
+    justify-content: center;
+    gap:8%;
+    width:60%;
+
   }
   /******************************************************************price-card*******************/
   .price-card{
     background-color: white;
-    border:2px solid black;
+    border:3px solid black;
     border-radius:20px;
     display: flex;
     flex-direction: column;
+    font-family: "Inter", sans-serif;
+    text-align: left;
+    width:50%;
+    padding:5%;
+    box-shadow:0 5px 0 #00000080;
 
   }
 
   .price-card-image{
-    object-fit: cover;
+    width:30%;
+  }
+  .price-card-title{
+    color:rgb(51, 51, 51);
+    font-size:1.5rem;
+    font-weight:650;
+    margin:5% 0;
   }
 
- 
+  .price-card-description{
+    color:rgb(102, 102, 102);
+    font-weight:600;
+    font-size:0.9rem;
+    line-height:1.5rem;
+    width:80%;
+    margin:0;
+  }
+  .price-container{
+    display:flex;
+    align-items: end;
+    gap:3%;
+  }
+  .price-container>h2{
+    color:rgb(51, 51, 51);
+    font-size: 3rem;
+    font-weight:800;
+    margin:0;
+  }
+  .monthly-price{
+    display:flex;
+    flex-direction: column;
+  }
+
+  .monthly-price h3{
+    font-size: 0.9rem;
+    color:rgb(102, 102, 102);
+    font-weight:600;
+    margin:0;
+  }
+
+ .extra-info{
+  font-size: 0.9rem;
+  color:rgb(102, 102, 102);
+  font-weight:700;
+  margin:0;
+  padding-bottom:5%;
+
+ }
+ .price-card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+ .price-card-details{
+  color:rgb(102, 102, 102);
+  font-size: 0.9rem;
+  line-height:1.5rem;
+  font-weight: 550;
+  display:flex;
+  gap:3%;
+  align-items: center;
+ }
+
+
+ .price-card-button{
+  border:2px solid black;
+  background-color: #99948f;
+  font-size:1.2rem;
+  font-weight:800;
+  height:3rem;
+  border-radius:10px;
+  box-shadow: 0 5px 0 rgb(205, 203, 203);
+ }
+
+ .price-card-footer{
+  text-align: center;
+  font-weight:600;
+  font-size:0.9rem;
+  margin-top:10%;
+ }

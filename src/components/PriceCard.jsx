@@ -4,25 +4,27 @@ import React from 'react'
 function PriceCard(props) {
     const details= props.details;
   return (
-    <div className='price-card'>
-    <div className='price-card-image'>
-        <img src={props.image} alt={props.alt}/>
-    </div>
-    <h1>{props.title}</h1>
-    <p>{props.description}</p>
+    <div className="price-card">
+   <img className="price-card-image" src={props.image} alt={props.alt}/>
+    <h1 class="price-card-title">{props.title}</h1>
+    <p className="price-card-description">{props.description}</p>
    <div className="price-container">
         <h2>{props.price}</h2>
-        <h3>{props.unit}</h3>
+        <div className="monthly-price">
+        <h3 >{props.currency}</h3>
+        <h3 >{props.unit}</h3>
+        </div>
     </div>
+    <h3 className="extra-info">{props.extra}</h3>
     <ul>
-        {details.map((detail)=><li>{detail}</li>)}
+        {details.map((detail)=><li className="price-card-details"><i class="fa-solid fa-circle-check"></i><div className="detail-text">{detail}</div></li>)}
     </ul>
-    <button>
+    <button className="price-card-button">
         {props.button}
     </button>
-    <fdiv>
+    <div className="price-card-footer">
         {props.footer}
-    </fdiv>
+    </div>
 
     </div>
   )
