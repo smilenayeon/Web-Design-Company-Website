@@ -25,7 +25,7 @@ import Eye from "../../../assets/images/eye.svg";
 
 function DetailedServiceDescription() {
   return (
-    <div className="DetailedServiceDescription">
+    <div id="how-it-works" className="DetailedServiceDescription">
     <h1>How it works</h1>
     <div className='cards-container'>
    {cardData.map( (data,index) => (

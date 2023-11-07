@@ -4,7 +4,7 @@ import Availability from './Availability';
 
 function Pricing() {
   return (
-    <div className="pricing-section">
+    <div id="pricing" className="pricing-section">
     <Availability/>
     <Price/>
     </div>

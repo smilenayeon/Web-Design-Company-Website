@@ -50,7 +50,7 @@ const FAQData=[
 
 function FAQ() {
   return (
-    <div className="FAQ-section">
+    <div id="FAQs" className="FAQ-section">
     <h1>FAQ</h1>
     <div className="FAQAccordian-area">
     {FAQData.map(({question,answer},index)=>( <FAQAccordian key={index} question={question} answer={answer}/>))}

@@ -3,6 +3,9 @@
   font-family: "Roboto", "Roboto Placeholder", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -12,6 +15,7 @@
     padding: 10px 20px;
     height:70px;
     font-weight: 500;
+    
   }
   
   .navbar-logo {
@@ -23,6 +27,7 @@
         display: flex;
         justify-content: flex-end;
         flex-grow: 1;
+        list-style-type:none;
 
   }
   .navbar-links a {
@@ -791,6 +796,10 @@
   font-size:1.1rem;
   font-weight:500;
   line-height: 2.5rem;
+ }
+ .footer-section a{
+  text-decoration: none;
+  color:white;
  }
 
  .super-hello-mini-logo{

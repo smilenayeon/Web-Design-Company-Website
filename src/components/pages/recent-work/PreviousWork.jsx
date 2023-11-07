@@ -14,7 +14,7 @@ const previousWorkData=[
 
 function PreviousWork() {
   return (
-    <div className='previous-work-section'>
+    <div id="recent-work" className='previous-work-section'>
         <h1>What we've been up to…</h1>
         <div className='previous-works-table'>
         {previousWorkData.map(({image,title,content},index)=><PreviousWorkCard image={image} title={title} content={content} key={index}/>)}

@@ -24,7 +24,7 @@ const benefitData= [
 
 function MemebershipBenefit() {
   return (
-    <div className="membership-benefit-section">
+    <div id="benefits" className="membership-benefit-section">
     <h1>Membership benefits</h1>
     <div className="memebership-benefits-table">
         {benefitData.map(({image,title,content},index) =>(<MebershipBenefitCard key={index} image={image} title={title} content={content}/>)   )}
