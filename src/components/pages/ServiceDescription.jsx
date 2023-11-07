@@ -1,5 +1,5 @@
 import React from 'react'
-import DesignRobot from "../assets/images/design-robot.jpg";
+import DesignRobot from "../../assets/images/design-robot.jpg";
 
 function ServiceDescription() {
   return (

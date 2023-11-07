@@ -1,6 +1,6 @@
 import React from 'react'
-import Rating from "../assets/images/rating.svg";
-import Client from "../assets/images/client.svg";
+import Rating from "../../assets/images/rating.svg";
+import Client from "../../assets/images/client.svg";
 
 function Review() {
   return (

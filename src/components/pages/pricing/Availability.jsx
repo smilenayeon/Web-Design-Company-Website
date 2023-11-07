@@ -1,5 +1,5 @@
 import React from 'react'
-import Rabbit from "../assets/images/rabbit.svg";
+import Rabbit from "../../../assets/images/rabbit.svg";
 
 function Availability() {
   return (

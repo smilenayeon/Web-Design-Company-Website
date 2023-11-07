@@ -1,16 +1,16 @@
 import React from 'react'
 import MebershipBenefitCard from './MebershipBenefitCard';
-import Star from "../assets/images/star.svg";
-import CarryingCheck from "../assets/images/carrying-check.svg";
-import ThumbsUp from "../assets/images/thumbs-up.svg";
-import Money from "../assets/images/money.svg";
-import Bubble from "../assets/images/bubble.svg";
-import Screen from "../assets/images/screen.svg";
-import Disney from "../assets/images/disney.svg";
-import CGV from "../assets/images/cgv.svg";
-import Cointree from "../assets/images/cointree.svg";
-import Zoos from "../assets/images/zoos.svg";
-import FrameUser from "../assets/images/frameuser.svg";
+import Star from "../../../assets/images/star.svg";
+import CarryingCheck from "../../../assets/images/carrying-check.svg";
+import ThumbsUp from "../../../assets/images/thumbs-up.svg";
+import Money from "../../../assets/images/money.svg";
+import Bubble from "../../../assets/images/bubble.svg";
+import Screen from "../../../assets/images/screen.svg";
+import Disney from "../../../assets/images/disney.svg";
+import CGV from "../../../assets/images/cgv.svg";
+import Cointree from "../../../assets/images/cointree.svg";
+import Zoos from "../../../assets/images/zoos.svg";
+import FrameUser from "../../../assets/images/frameuser.svg";
 
 
 const benefitData= [

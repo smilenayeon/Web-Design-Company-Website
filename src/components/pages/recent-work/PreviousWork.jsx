@@ -1,8 +1,8 @@
 import React from 'react'
-import Phone from "../assets/images/phone.svg";
-import Game from "../assets/images/game.svg";
-import ShadowCity from "../assets/images/shadow-city.svg";
-import Novofit from "../assets/images/novofit.svg";
+import Phone from "../../../assets/images/phone.svg";
+import Game from "../../../assets/images/game.svg";
+import ShadowCity from "../../../assets/images/shadow-city.svg";
+import Novofit from "../../../assets/images/novofit.svg";
 import PreviousWorkCard from './PreviousWorkCard';
 
 const previousWorkData=[

@@ -1,5 +1,5 @@
 import React from 'react'
-import MiniLogo from "../assets/images/super-hello-mini-logo.jpg";
+import MiniLogo from "../../assets/images/super-hello-mini-logo.jpg";
 
 function Footer() {
   return (

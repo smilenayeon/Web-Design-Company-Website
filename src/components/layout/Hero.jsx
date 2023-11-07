@@ -1,6 +1,6 @@
 import React from 'react'
-import RobotRabbit from "../assets/images/robot-rabbit.svg";
-import SuperHello from "../assets/images/super-hello.svg";
+import RobotRabbit from "../../assets/images/robot-rabbit.svg";
+import SuperHello from "../../assets/images/super-hello.svg";
 
 
 function Hero() {

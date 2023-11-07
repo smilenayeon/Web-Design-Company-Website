@@ -1,7 +1,7 @@
 import React from 'react'
 import PriceCard from './PriceCard';
-import MostPopular from "../assets/images/most-popular.jpg";
-import Clock from "../assets/images/clock.jpg";
+import MostPopular from "../../../assets/images/most-popular.jpg";
+import Clock from "../../../assets/images/clock.jpg";
 
 
 const priceCardData=[

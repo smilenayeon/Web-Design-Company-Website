@@ -1,8 +1,8 @@
 import React from 'react'
 import DescriptionCard from './DescriptionCard';
-import Lightening from '../assets/images/lightening.svg';
-import PaperPlane from "../assets/images/paper-plane.svg";
-import Eye from "../assets/images/eye.svg";
+import Lightening from "../../../assets/images/lightening.svg";
+import PaperPlane from "../../../assets/images/paper-plane.svg";
+import Eye from "../../../assets/images/eye.svg";
 
          const cardData=
         [
