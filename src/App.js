@@ -11,6 +11,8 @@ import MoreExamples from './components/MoreExamples';
 import Review from './components/Review';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
+import Booking from './components/Booking';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
       <Review/>
       <Pricing/>
       <FAQ />
+      <Booking/>
+      <Footer/>
     </div>
   );
 }
