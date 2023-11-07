@@ -9,7 +9,7 @@ import DetailedServiceDescription from './components/pages/how-it-works/Detailed
 import ProvidingServices from './components/pages/how-it-works/ProvidingServices';
 import MemebershipBenefit from "./components/pages/benefits/MemebershipBenefit";
 import PreviousWork from './components/pages/recent-work/PreviousWork';
-import MoreExamples from './components/pages/recent-work/MoreExamples';
+import MoreExamples from  "./components/pages/MoreExamples";
 import Review from './components/pages/Review';
 import Pricing from './components/pages/pricing/Pricing';
 import FAQ from './components/pages/FAQs/FAQ';

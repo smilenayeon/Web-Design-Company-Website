@@ -6,7 +6,7 @@ function PriceCard(props) {
   return (
     <div className="price-card">
    <img className="price-card-image" src={props.image} alt={props.alt}/>
-    <h1 class="price-card-title">{props.title}</h1>
+    <h1 className="price-card-title">{props.title}</h1>
     <p className="price-card-description">{props.description}</p>
    <div className="price-container">
         <h2>{props.price}</h2>
@@ -17,7 +17,7 @@ function PriceCard(props) {
     </div>
     <h3 className="extra-info">{props.extra}</h3>
     <ul>
-        {details.map((detail)=><li className="price-card-details"><i class="fa-solid fa-circle-check"></i><div className="detail-text">{detail}</div></li>)}
+        {details.map((detail,index)=><li key={index} className="price-card-details"><i className="fa-solid fa-circle-check"></i><div className="detail-text">{detail}</div></li>)}
     </ul>
     <button className="price-card-button">
         {props.button}

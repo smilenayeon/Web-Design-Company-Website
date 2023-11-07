@@ -9,7 +9,7 @@ function FAQAccordian(props) {
   return (
     <div className="FAQAccordian-section">
       <div className="FAQ-question" onClick={toggle}>
-      <i class={icon}></i>
+      <i className={icon}></i>
         {props.question}
       </div>
 

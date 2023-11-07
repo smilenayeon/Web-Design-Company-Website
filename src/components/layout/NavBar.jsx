@@ -1,11 +1,34 @@
-import React from 'react';
+import React,{useState, useEffect } from 'react';
 
 
 
 function NavBar() {
+
+  const [lastScrollTop, setLastScrollTop] =useState(0);
+  const [isVisible,setIsVisible]=useState(true);
+
+  useEffect(()=>{
+    const handleScroll=()=>{
+
+        const currentScroll=window.scrollY;
+
+        if (currentScroll >lastScrollTop){   //scrolling down
+          setIsVisible(false)
+        } else {              //scrolling up
+          setIsVisible(true)
+        };
+
+        setLastScrollTop(currentScroll <= 0 ? 0 : currentScroll);  //update the last scroll position
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return()=>{window.removeEventListener('scroll', handleScroll)};
+
+  },[lastScrollTop]);
+
   return (
     
-    <div className="navbar">
+    <div className={`navbar ${isVisible ? 'visible':'hidden'}`}>
         <div className="navbar-logo">Super Hello</div>
        
         <ul className="navbar-links">
