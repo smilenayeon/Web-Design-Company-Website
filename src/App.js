@@ -10,6 +10,7 @@ import PreviousWork from './components/PreviousWork';
 import MoreExamples from './components/MoreExamples';
 import Review from './components/Review';
 import Pricing from './components/Pricing';
+import FAQ from './components/FAQ';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <MoreExamples/>
       <Review/>
       <Pricing/>
+      <FAQ />
     </div>
   );
 }

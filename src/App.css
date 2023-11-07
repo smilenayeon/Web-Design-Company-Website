@@ -615,7 +615,7 @@
   }
   .price-container{
     display:flex;
-    align-items: end;
+    align-items: flex-end;
     gap:3%;
   }
   .price-container>h2{
@@ -675,3 +675,66 @@
   font-size:0.9rem;
   margin-top:10%;
  }
+
+ /******************************************************************FAQ section********************/
+ .FAQ-section{
+  background-color: white;
+  position:relative;
+ }
+ .FAQ-section>h1{
+  text-align: center;
+  padding-top:5%;
+  font-size: 3rem;
+  font-weight: 600;
+  color:#413f3f;
+ }
+
+ .FAQ-section::before{
+  content:'';
+  background-image: url("../src/assets/images/yellow-white-wave.svg");
+  height:100px;
+  position:absolute;
+  top:-60px;
+  width:100%;
+  background-repeat: repeat-x;
+ }
+
+ .FAQAccordian-area{
+  border:2px solid rgb(63, 62, 62);
+  margin:0 10% 10% 10%;
+  border-radius: 20px;
+ }
+
+ /************************************************************FAQ Accrodian ****************************/
+ .FAQAccordian-section{
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 2rem;
+  margin:0 5%;
+ }
+ .icon{
+  color:rgb(165, 159, 159);
+  transition: transform 0.3s ease-in-out;
+  margin-right:1%;
+}
+ .rotate{
+  transform: rotate(45deg);
+ }
+
+ .FAQ-question{
+  color:#4d4b4b;
+  border-top: 4px solid rgb(216, 214, 214);
+  border-width: 70%;
+  display:flex;
+  align-items: center;
+  padding: 2% 0;
+ }
+ .FAQ-answer{
+  color: #6d6c6c;
+  padding:0 0 2% 3%;
+ }
+
+ .FAQAccordian-section:first-child .FAQ-question  {
+  border-top:none;
+ }
+
