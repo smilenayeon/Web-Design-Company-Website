@@ -13,12 +13,12 @@ function Footer() {
           <li onClick={()=>scrollToSection("how-it-works")}>How It Works</li>
           <li onClick={()=>scrollToSection("pricing")}>Pricing</li>
           <li onClick={()=>scrollToSection("FAQs")}>FAQs</li>
-          <li>Contact</li>
+          <li><a className="contact" href="mailto:someone@example.com?subject=The%20Subject&body=Hello%2C%20let's%20talk!">Contact</a></li>
         </ul>
       </nav>
       <div className="copy-right">
         <p>© 2023 Super Hello</p>
-        <p>Privacy Policy</p>
+        <a href="https://www.superhello.co/Privacy_policy"><p>Privacy Policy</p></a>
       </div>
     </div>
   )

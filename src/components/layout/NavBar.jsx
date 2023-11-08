@@ -43,7 +43,7 @@ function NavBar() {
         <li onClick={() => { scrollToSection("how-it-works"); closeMenu(); }}>How It Works</li>
         <li onClick={() => { scrollToSection("pricing"); closeMenu(); }}>Pricing</li>
         <li onClick={() => { scrollToSection("FAQs"); closeMenu(); }}>FAQs</li>
-        <li onClick={closeMenu}>Contact</li>
+        <li onClick={closeMenu}><a className="contact" href="mailto:someone@example.com?subject=The%20Subject&body=Hello%2C%20let's%20talk!">Contact</a></li>
         <li><button className="navbar-login" onClick={closeMenu}>Log in</button></li>
       </ul>
 

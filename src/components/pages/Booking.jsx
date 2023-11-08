@@ -7,7 +7,10 @@ function Booking() {
       <h3>Got questions? Lets chat.</h3>
       <p>Discover how Super Hello can breathe new life into your brand and take it to the next level.</p>
     </div>
-    <button className="booking-button">Book a call</button>
+    <a className="book" href="https://calendly.com/dflighty/15min?month=2023-11">
+      <button className="booking-button">Book a call</button>
+    </a>
+
     </div>
   )
 }

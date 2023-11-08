@@ -23,7 +23,7 @@ function PriceCard(props) {
         {props.button}
     </button>
     <div className="price-card-footer">
-        {props.footer}
+        <a className="book" href="https://calendly.com/dflighty/15min?month=2023-11">{props.footer}</a>
     </div>
 
     </div>

@@ -48,13 +48,22 @@ html,body {
         list-style-type:none;
 
   }
-  .navbar-links-container li {
+  .navbar-links-container li{
     color: #fff;
   text-decoration: none;
   align-self: center;
   cursor: pointer;
-  font-size: 1.1rem;;
+  font-size: 1.1rem;
   }
+  .navbar-links-container li:hover{
+    color:#ff8000;
+    text-decoration: underline;
+  }
+  .contact{
+    text-decoration: none;
+    color:inherit;
+  }
+
   .navbar-login {
     width:4.2rem;
     height:2.5rem;
@@ -185,8 +194,9 @@ html,body {
     cursor: pointer;
     font-size: 1.12rem;
     font-weight:bold;
-   
-
+  }
+  .hero-button:hover{
+    background-color:rgb(243, 201, 160);
   }
 
   @media (max-width: 1200px) {
@@ -262,7 +272,7 @@ html,body {
 
   .description p{
     font-family: "Roboto", "Roboto Placeholder", sans-serif;
-    font-size: 19px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0em;
@@ -313,9 +323,9 @@ html,body {
   }
   .DetailedServiceDescription.visible::before {
     /* When the element is in view, the visible class adds these properties */
-    animation: slideFromRight 0.5s forwards;
+    animation: slideFromRight 0.4s forwards;
     visibility: visible;
-    
+
   }
 
   .how-it-works-section>h1{
@@ -332,11 +342,11 @@ html,body {
     margin: 2% 10% 0 10%;
   }
 
-  @media(max-width:1024px){
+  @media(max-width:855px){
     .cards-container{
       flex-direction: column;
       align-items: center;
-      
+
     }
   }
   @media(max-width:600px){
@@ -375,15 +385,20 @@ html,body {
 
   .card-content{
     margin:5% 10% auto 10%;
+    font-size:1.3rem;
   }
-  @media(max-width:1024px){
+  @media(max-width:855px){
     .desciption-card-container{
       margin:3% 0;
       max-width: 60%;
-      font-size: 1.3rem;
     }
-      
     }
+    @media(max-width:480px){
+      .desciption-card-container{
+        margin:3% 0;
+        width: 100%;
+      }
+      }
   /****************************************Providing services section*****/
   .providing-services-section{
     background-color: #f7cb46;
@@ -421,7 +436,7 @@ html,body {
   transform: translateX(-100%); /* Start offscreen */
 }
 .providing-services-section.animated::before {
-  animation: slideInFromLeft 1s ease forwards;
+  animation: slideInFromLeft 0.4s ease forwards;
 }
 
 
@@ -436,15 +451,16 @@ html,body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2% 0;
+    padding: 2%;
     gap:3rem;
-    width:70%;
+    width:90%;
     border:3px solid black;
     box-shadow: 0 5px 0px black;
   }
   @media(max-width:1024px){
     .service-box{
       flex-direction: column;
+      width:70%;
     }
     }
     @media(max-width:871px){
@@ -459,7 +475,7 @@ html,body {
     }
   /****************************************Providing services card section*****/
   .providing-service-card {
-    width:25%;
+    width:30%;
   }
 
   .providing-service-card-title{
@@ -470,6 +486,7 @@ html,body {
   .providing-service-card-item{
     text-align:left;
     list-style-position:inside;
+    font-size: 1.5rem;
   }
 
   .list{
@@ -539,15 +556,18 @@ html,body {
     box-shadow:0 5px 0 rgb(185, 184, 184);
     
   }
-
-  .mebership-benefit-card-content{
+  .mebership-benefit-card-content>h1{
     padding-right: 15%;
+    font-size: 1.8rem;
+    line-height: 2rem;
   }
-  @media(max-width:860px){
-    .mebership-benefit-card-content{
-      font-size:1.3rem;
-    }
+
+  .mebership-benefit-card-content>p{
+    padding-right: 15%;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
+  
 .previous-clients {
   text-align: center;
   font-weight: 700;
@@ -580,7 +600,7 @@ html,body {
 .previous-work-section::before{
   content: '';
   position: absolute;
-  top: -8vh;
+  top: -5vh;
   left: 0;
   width: 100%;
   height:70px;
@@ -705,6 +725,10 @@ html,body {
   border: 2x solid black;
   font-weight: 600;
   font-size:1rem;
+  transition: transform 0.3s ease-in-out; 
+}
+.black-box button:hover{
+  transform: scale(0.8);
 }
 /*******************************************************************review-section***********************/
 .review-section {
@@ -741,7 +765,7 @@ html,body {
 .client{
   display: flex;
   gap:10%;
-  width:50%;
+  width:20%;
 }
 
 .client-text{
@@ -812,7 +836,7 @@ html,body {
     display: flex;
     border-radius: 20px;
     border:5px solid black;
-    max-width:100%;
+    width:fit-content;
     box-shadow: 0 5px 0 rgb(180, 178, 178);
     margin-top:10%;
   }
@@ -957,7 +981,16 @@ html,body {
   height:3rem;
   border-radius:10px;
   box-shadow: 0 5px 0 rgb(205, 203, 203);
+  transition: transform 0.3s ease-in-out; 
  }
+ .price-card-button:hover{
+  transform: scale(0.8);
+}
+
+.book{
+  text-decoration: none;
+  color:inherit;
+}
 
  .price-card-footer{
   text-align: center;
@@ -965,6 +998,12 @@ html,body {
   font-size:0.9rem;
   margin-top:10%;
  }
+
+ .price-card-footer:hover{
+  color:#6d6c6c;
+  text-decoration: underline;
+ }
+
  @media(max-width:700px){
   .price-card{
     width:100%;
@@ -1087,6 +1126,10 @@ html,body {
   font-size: 1.2rem;
   font-weight: 800;
   border-radius: 10px;
+  transition: transform 0.3s ease-in-out; 
+ }
+ .booking-button:hover{
+  transform: scale(0.8);
  }
  /*****************************************************************footer section**********************/
  .footer-section{
@@ -1108,7 +1151,12 @@ html,body {
   color:white;
   cursor: pointer;
   margin:2% 0;
+  width:fit-content;
  }
+ .footer-section li:hover{
+  color:#ff8000;
+  text-decoration: underline;
+}
 
  .super-hello-mini-logo{
   min-width:9%;
@@ -1120,4 +1168,12 @@ html,body {
   display: flex;
   justify-content: space-between;
   margin:5%;
+ }
+ .copy-right>a{
+  text-decoration: none;
+  color:inherit;
+ }
+ .copy-right>a:hover{
+  text-decoration: underline;
+  color:#ff8000;
  }
