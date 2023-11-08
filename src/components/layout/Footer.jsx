@@ -1,5 +1,6 @@
 import React from 'react'
 import MiniLogo from "../../assets/images/super-hello-mini-logo.jpg";
+import scrollToSection from '../utilities/scrollToSection';
 
 function Footer() {
   return (
@@ -7,11 +8,11 @@ function Footer() {
       <img className="super-hello-mini-logo" src={MiniLogo} alt="super hello mini logo"/>
       <nav>
         <ul>
-          <li><a href="#benefits">Benefits</a></li>
-          <li><a href="#recent-work">Recent Work</a></li>
-          <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#FAQs">FAQs</a></li>
+          <li onClick={()=>scrollToSection("benefits")}>Benefits</li>
+          <li onClick={()=>scrollToSection("recent-work")}>Recent Work</li>
+          <li onClick={()=>scrollToSection("how-it-works")}>How It Works</li>
+          <li onClick={()=>scrollToSection("pricing")}>Pricing</li>
+          <li onClick={()=>scrollToSection("FAQs")}>FAQs</li>
           <li><a href="#open-email">Contact</a></li>
         </ul>
       </nav>

@@ -1,6 +1,5 @@
 import React,{useState, useEffect } from 'react';
-
-
+import scrollToSection from '../utilities/scrollToSection';
 
 function NavBar() {
 
@@ -26,18 +25,20 @@ function NavBar() {
 
   },[lastScrollTop]);
 
+  
+
   return (
     
     <div className={`navbar ${isVisible ? 'visible':'hidden'}`}>
         <div className="navbar-logo">Super Hello</div>
        
         <ul className="navbar-links">
-            <li><a href="#benefits">Benefits</a></li>
-            <li><a href="#recent-work">Recent Work</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#FAQs">FAQs</a></li>
-            <li><a href="#beenfits">Contact</a></li>
+            <li onClick={()=>scrollToSection("benefits")}>Benefits</li>
+            <li onClick={()=>scrollToSection("recent-work")}>Recent Work</li>
+            <li onClick={()=>scrollToSection("how-it-works")}>How It Works</li>
+            <li onClick={()=>scrollToSection("pricing")}>Pricing</li>
+            <li onClick={()=>scrollToSection("FAQs")}>FAQs</li>
+            <li>Contact</li>
         </ul>
        
         <div className="navbar-login">

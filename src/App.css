@@ -4,9 +4,9 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  
+  overflow-x: hidden;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -45,7 +45,7 @@ html {
         list-style-type:none;
 
   }
-  .navbar-links a {
+  .navbar-links li {
     color: #fff;
   text-decoration: none;
   padding: 0 10px; 
