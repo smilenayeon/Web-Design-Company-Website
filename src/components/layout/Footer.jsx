@@ -5,7 +5,7 @@ import scrollToSection from '../utilities/scrollToSection';
 function Footer() {
   return (
     <div className="footer-section">
-      <img className="super-hello-mini-logo" src={MiniLogo} alt="super hello mini logo"/>
+      <img className="super-hello-mini-logo" src={MiniLogo} alt="super hello mini logo" onClick={()=>scrollToSection("hero")}/>
       <nav>
         <ul>
           <li onClick={()=>scrollToSection("benefits")}>Benefits</li>
@@ -13,7 +13,7 @@ function Footer() {
           <li onClick={()=>scrollToSection("how-it-works")}>How It Works</li>
           <li onClick={()=>scrollToSection("pricing")}>Pricing</li>
           <li onClick={()=>scrollToSection("FAQs")}>FAQs</li>
-          <li><a href="#open-email">Contact</a></li>
+          <li>Contact</li>
         </ul>
       </nav>
       <div className="copy-right">

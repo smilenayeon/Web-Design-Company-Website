@@ -1,51 +1,55 @@
-import React,{useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import scrollToSection from '../utilities/scrollToSection';
 
 function NavBar() {
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);  //for hamburger menu
 
-  const [lastScrollTop, setLastScrollTop] =useState(0);
-  const [isVisible,setIsVisible]=useState(true);
-
-  useEffect(()=>{
-    const handleScroll=()=>{
-
-        const currentScroll=window.scrollY;
-
-        if (currentScroll >lastScrollTop){   //scrolling down
-          setIsVisible(false)
-        } else {              //scrolling up
-          setIsVisible(true)
-        };
-
-        setLastScrollTop(currentScroll <= 0 ? 0 : currentScroll);  //update the last scroll position
+  useEffect(() => {                          //NavBar re-appears when the use scrolls up, and disappear when scroll down
+    const handleScroll = () => {
+      let currentScroll = window.scrollY;
+      if (currentScroll > lastScrollTop) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      setLastScrollTop(currentScroll <= 0 ? 0 : currentScroll);
     };
-    
-    window.addEventListener('scroll', handleScroll);
-    return()=>{window.removeEventListener('scroll', handleScroll)};
 
-  },[lastScrollTop]);
+    window.addEventListener('scroll', handleScroll); //update current scroll
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollTop]);
 
-  
+  const handleMenuClick = () => {
+    setMenuOpen(!menuOpen); // Toggle the menu state
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);     //close the hamburger menu when an li is clicked
+  };
 
   return (
-    
-    <div className={`navbar ${isVisible ? 'visible':'hidden'}`}>
-        <div className="navbar-logo">Super Hello</div>
-       
-        <ul className="navbar-links">
-            <li onClick={()=>scrollToSection("benefits")}>Benefits</li>
-            <li onClick={()=>scrollToSection("recent-work")}>Recent Work</li>
-            <li onClick={()=>scrollToSection("how-it-works")}>How It Works</li>
-            <li onClick={()=>scrollToSection("pricing")}>Pricing</li>
-            <li onClick={()=>scrollToSection("FAQs")}>FAQs</li>
-            <li>Contact</li>
-        </ul>
-       
-        <div className="navbar-login">
-            <button>Log in</button>
-        </div>
+    <div className={`navbar ${isVisible ? 'visible' : 'hidden'}`}>
+      <div className="navbar-logo" onClick={() => scrollToSection("hero")}>Super Hello</div>
+      
+      <button className="hamburger" onClick={handleMenuClick}>
+        <span className={`menu-icon ${menuOpen ? 'open' : ''}`}></span>
+      </button>
+
+      <ul className={`navbar-links-container ${menuOpen ? 'open' : ''}`}>
+        <li onClick={() => { scrollToSection("benefits"); closeMenu(); }}>Benefits</li>
+        <li onClick={() => { scrollToSection("recent-work"); closeMenu(); }}>Recent Work</li>
+        <li onClick={() => { scrollToSection("how-it-works"); closeMenu(); }}>How It Works</li>
+        <li onClick={() => { scrollToSection("pricing"); closeMenu(); }}>Pricing</li>
+        <li onClick={() => { scrollToSection("FAQs"); closeMenu(); }}>FAQs</li>
+        <li onClick={closeMenu}>Contact</li>
+        <li><button className="navbar-login" onClick={closeMenu}>Log in</button></li>
+      </ul>
+
+     
     </div>
-  )
+  );
 }
 
 export default NavBar;

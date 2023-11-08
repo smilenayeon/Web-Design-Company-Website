@@ -3,18 +3,18 @@
   font-family: "Roboto", "Roboto Placeholder", sans-serif;
 }
 
-html {
+html,body {
   overflow-x: hidden;
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     background-color: #000;
     color: #fff;
     padding: 10px 20px;
-    height:70px;
+    height:13%;
     font-weight: 500;
     position:fixed;
     left:0;
@@ -22,6 +22,7 @@ html {
     z-index:9999;
     width:100%;
     box-sizing: border-box; 
+   
   
   }
   .visible{
@@ -34,46 +35,123 @@ html {
   }
   
   .navbar-logo {
-    font-size: 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
     
   }
   
-  .navbar-links{
+  .navbar-links-container{
         display: flex;
+        gap:2%;
         justify-content: flex-end;
         flex-grow: 1;
         list-style-type:none;
 
   }
-  .navbar-links li {
+  .navbar-links-container li {
     color: #fff;
   text-decoration: none;
-  padding: 0 10px; 
+  align-self: center;
+  cursor: pointer;
+  font-size: 1.1rem;;
   }
-  
-  .navbar-login button {
-    padding: 8px 16px;
+  .navbar-login {
+    width:4.2rem;
+    height:2.5rem;
     border: none;
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size:0.9rem;
+  }
+  /* responsiveness for NavBar*/
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
     cursor: pointer;
-    font-weight: bold;
+    padding: 0;
+    z-index: 10;
+  }
+  /* hamburger menu icon */
+  .menu-icon,
+  .menu-icon::before,
+  .menu-icon::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
   }
   
-  /* responsivenessfor NavBar*/
-  @media (max-width: 768px) {
-    .navbar-links,
-    .navbar-login {
-      display: none; /* or change to a hamburger menu */
-    }
+  .menu-icon::before,
+  .menu-icon::after {
+    content: '';
   }
+  
+  .menu-icon::before {
+    transform: translateY(-8px);
+  }
+  
+  .menu-icon::after {
+    transform: translateY(8px);
+  }
+ 
+  /* Rotate the bars into an 'X' when open */
+  .menu-icon.open {
+    background: transparent;
+  }
+  
+  .menu-icon.open::before {
+    transform: translateY(0) rotate(45deg);
+  }
+  
+  .menu-icon.open::after {
+    transform: translateY(0) rotate(-45deg);
+  }
+  
+/* Media query for screens smaller than 600px */
+@media (max-width: 810px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-links-container { 
+    display: none; 
+    position: absolute;
+    right: 0;
+    top: 8vh; 
+    flex-direction: column;
+    background-color: #000;
+    width: 100%;
+    transform: translateY(-100vh); 
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 0;
+  }
+
+  .navbar-links-container.open { 
+    transform: translateY(0);
+    display: flex; 
+  }
+
+  .navbar-links-container li {
+    padding: 10px;
+  }
+}
 
   /********************************************************************************Hero section */
   .hero-section{
-    padding-top:7%;
+    padding-top:13vh;
     background-color: #f196e4;
     display:flex;
-    height:85vh;
     color:#333333;
 
   }
@@ -81,17 +159,17 @@ html {
   .hero-content{
     font-weight: 800;
     margin:0 8%;
+   
   }
 
   .hero-title{
-    height:auto;
     margin-bottom:2%;
   }
 
   .hero-tagline{
-    font-size: 50px;
+    font-size: 3.12rem;
     margin:0;
-    letter-spacing: -2.6px;
+    letter-spacing: -0.16rem;
   }
 
   .hero-description{
@@ -105,28 +183,49 @@ html {
     height:3.5rem;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.12rem;
     font-weight:bold;
    
 
   }
 
-  .hero-image{
-    width:100%;
-    padding:0;
+  @media (max-width: 1200px) {
+    .hero-content{margin-right:0;}
   }
+  @media (max-width: 1000px) {
+    .hero-section{
+      flex-direction: column;
+      
+    }
+    .hero-image{
+      margin-left:50%;
+    }
+  }
+  @media (max-width: 645px) {
+    .hero-title{ width:50vw;}
+  }
+  @media (max-width: 555px) {
+  
+    .hero-image{
+      margin:0;
+    }
+    
+    
+  }
+
 
 /****************************************************************Service Description section*/
 .service-description-section{
     position: relative;
     background-color: #f7cb46;
     display: flex;
+    padding-top:8%;
 }
 
 .service-description-section::before {
     content: '';
     position: absolute;
-    top: -60px;
+    top: 0;
     left: 0;
     width: 100%;
     height:70px;
@@ -809,17 +908,19 @@ html {
   margin:0;
   list-style-type:none;
   padding:0;
-  font-size:1.1rem;
+  font-size:1 rem;
   font-weight:500;
-  line-height: 2.5rem;
+ 
  }
- .footer-section a{
-  text-decoration: none;
+ .footer-section li{
   color:white;
+  cursor: pointer;
+  margin:2% 0;
  }
 
  .super-hello-mini-logo{
   width:9%;
+  cursor: pointer;
  }
  .copy-right{
   border-top:1px solid #99948f;
