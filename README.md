@@ -1,3 +1,15 @@
+I rebuilt the website for 'Super Hello,' a web design company, as part of my frontend developer portfolio using React. My project includes several notable improvements:
+
+1. In the 'Pricing' section, I replaced static images with customizable 'slots-available-box' elements for future updates.
+2. I implemented a scroll-responsive navigation bar for enhanced user experience.
+3. Users can seamlessly navigate between sections via the NavBar without any re-rendering.
+4. Clicking the company logo in the navbar instantly returns users to the top of the page.
+5. The 'How It Works' section now features a dynamic side image that appears as users engage with the content.
+   
+These enhancements showcase my proficiency in frontend development, providing 'Super Hello' with a more modern and user-friendly website.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
