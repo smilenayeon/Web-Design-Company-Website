@@ -228,20 +228,22 @@ html,body {
     top: 0;
     left: 0;
     width: 100%;
-    height:70px;
+    height: 70px;
     background-image: url("../src/assets/images/pink-yellow-wave.svg");
     background-repeat: repeat-x;
     
   }
 
   .design-robot{
-    height:80vh;
+    width: 50vw;
+    height: auto;
     margin: 2% 5%;
   }
 
   .description{
     align-self:center;
     display:flex;
+    align-items: center;
     flex-direction: column;
     margin-right:14%;
    
@@ -254,6 +256,7 @@ html,body {
     letter-spacing: -.8px;
     line-height: 1.3em;
     margin:0;
+  
    
   }
 
@@ -264,26 +267,58 @@ html,body {
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.7em;
+    
   }
-  /*************************************************Detailed Service Despcription*********/
-  .DetailedServiceDescription{
+
+  @media (max-width:1000px){
+    .service-description-section{
+      flex-direction: column-reverse;
+    }
+    .description{
+      margin:10% 5% 0% 5%;
+
+    }
+    
+
+  }
+  /*************************************************how-it-works-section*********/
+  .how-it-works-section{
     background-color: #f7cb46;
     padding-top:5%;
     position:relative;
+  }
+  /*connectoin.svg will slide in from right*/
+  @keyframes slideFromRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 
   .DetailedServiceDescription::before{
     content:'';
     position: absolute;
-    top: -105px;
-    left: 78.5%;
-    width: 100%;
-    height:300px;
+    top: -15vw;
+    left: 80%;
+    width: 50vw;
+    height: 30vw;
+    margin:5%;
     background-image: url("../src/assets/images/connection.svg");
     background-repeat:no-repeat;
+    visibility: hidden;
+  }
+  .DetailedServiceDescription.visible::before {
+    /* When the element is in view, the visible class adds these properties */
+    animation: slideFromRight 0.5s forwards;
+    visibility: visible;
+    
   }
 
-  .DetailedServiceDescription>h1{
+  .how-it-works-section>h1{
     text-align: center;
     margin: 0 auto;
     font-size:3rem;
@@ -296,6 +331,16 @@ html,body {
     gap:2%;
     margin: 2% 10% 0 10%;
   }
+
+  @media(max-width:1024px){
+    .cards-container{
+      flex-direction: column;
+      align-items: center;
+      
+    }
+  }
+
+  
 
   /****************************************Description Card*****/
   .desciption-card-container{
@@ -326,7 +371,14 @@ html,body {
   .card-content{
     margin:5% 10% auto 10%;
   }
-
+  @media(max-width:1024px){
+    .desciption-card-container{
+      margin:3% 0;
+      max-width: 60%;
+      font-size: 1.5rem;
+    }
+      
+    }
   /****************************************Providing services section*****/
   .providing-services-section{
     background-color: #f7cb46;
@@ -339,15 +391,32 @@ html,body {
     text-align: center;
   }
 
-  .providing-services-section::before{
-    content:'';
-    position: absolute;
-    top: -150px;
-    width: 100%;
-    height:300px;
-    background-image: url("../src/assets/images/star-bubble.svg");
-    background-repeat:no-repeat;
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
+
+.providing-services-section::before{
+  content:'';
+  position: absolute;
+  top: -150px;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background-image: url("../src/assets/images/star-bubble.svg");
+  background-repeat: no-repeat;
+  opacity: 0; /* Initialize hidden */
+  transform: translateX(-100%); /* Start offscreen */
+}
+.providing-services-section.animated::before {
+  animation: slideInFromLeft 1s ease forwards;
+}
 
 
   .providing-services-section > h1 {

@@ -3,6 +3,7 @@ import DescriptionCard from './DescriptionCard';
 import Lightening from "../../../assets/images/lightening.svg";
 import PaperPlane from "../../../assets/images/paper-plane.svg";
 import Eye from "../../../assets/images/eye.svg";
+import { useInView } from 'react-intersection-observer';
 
          const cardData=
         [
@@ -24,8 +25,17 @@ import Eye from "../../../assets/images/eye.svg";
         ];
 
 function DetailedServiceDescription() {
+
+  const { ref, inView } = useInView({         //for connection.svg to show on scroll
+    threshold: 1
+  });
+
   return (
-    <div id="how-it-works" className="DetailedServiceDescription">
+    <div id="how-it-works" className="how-it-works-section">
+     <div
+        className={`DetailedServiceDescription ${inView ? 'visible' : ''}`}
+        ref={ref} // Assign the ref here
+      ></div>
     <h1>How it works</h1>
     <div className='cards-container'>
    {cardData.map( (data,index) => (
