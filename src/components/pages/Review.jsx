@@ -10,7 +10,7 @@ function Review() {
             <p className="review-text">"I found the perfect designer for my start up. I can scale as I need too - no more hiring hassles and amazing results."</p>
             <div className="client">
                 <img className="client-logo" src={Client} alt="Blake A. Ngage Agency"/>
-                <div>
+                <div className="client-text">
                     <p className="client-name">Blake A.</p>
                     <p className="client-company">Ngage Agency</p>
                 </div>
