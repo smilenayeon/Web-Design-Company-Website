@@ -5,6 +5,7 @@ I rebuilt the website for 'Super Hello,' a web design company, as part of my fro
 3. Users can seamlessly navigate between sections via the NavBar without any re-rendering.
 4. Clicking the company logo in the navbar instantly returns users to the top of the page.
 5. The 'How It Works' section now features a dynamic side image that appears as users engage with the content.
+6. I added  a Login section that shows up when users click Login button from the NavBar. Client code is "client001" and password is "1234".
    
 These enhancements showcase my proficiency in frontend development, providing 'Super Hello' with a more modern and user-friendly website.
 
