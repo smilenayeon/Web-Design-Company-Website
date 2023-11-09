@@ -1,18 +1,18 @@
 import React,{useState} from 'react';
 import MiniLogo from "../../../assets/images/super-hello-mini-logo.jpg"
-import WelcomeUser from './WelcomeUser';
 
-function Login({showLogin,setShowLogin}) {
+function Login({ showLogin, setShowLogin, isLoggedIn, setIsLoggedIn }) {
     const[clientCode, setClicentCode]=useState("");
     const [password, setPassword]=useState("");
-    const [isLoggedIn, setIsLoggedIn]=useState(false);
+   
 
     const handleLogin = (e) => {
         e.preventDefault(); 
         if (clientCode === "client001" && password === "1234") {
             setIsLoggedIn(true);
+            setShowLogin(false);
         } else {
-            alert("Invalid credentials");
+            alert("Please check your client code and password again.");
             // Handle incorrect login details
         }
     };
@@ -20,10 +20,6 @@ function Login({showLogin,setShowLogin}) {
     const closeLogin = () => {
         setShowLogin(false);
     };
-
-    if (isLoggedIn) {
-        return <WelcomeUser clientCode={clientCode} />;
-    }
 
   return (
     <div id="login" className="login">

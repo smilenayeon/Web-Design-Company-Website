@@ -72,6 +72,7 @@ html,body {
     border-radius: 10px;
     font-weight: 900;
     font-size:0.9rem;
+    cursor: pointer;
   }
   /* responsiveness for NavBar*/
   .hamburger {
@@ -209,17 +210,6 @@ input{
 }
 #submit:hover{
   transform:scale(0.9);
-}
-
-
-/********************************************welcome-client***************/
-.welcome-client{
-padding-top:15vh;
-font-size: 1rem;
-font-weight: 800;
-text-align: right;
-background-color: #f196e4;
-color:white;
 }
 
 
