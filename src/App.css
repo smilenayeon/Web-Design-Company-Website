@@ -155,6 +155,73 @@ html,body {
     padding: 10px;
   }
 }
+/********************************************************************************log in */
+.login{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color:white;
+  padding-top:20vh;
+}
+
+.close-button{
+  color:#d5d3d0;
+  font-size:1.8rem;
+  font-weight:700;
+  align-self:last baseline;
+  margin-right:5%;
+  cursor: pointer;
+}
+.login-contact{
+  color:#f196e4;
+  font-weight:700;
+  font-size:1rem;
+  transition: transform 0.5 ease-in-out;
+}
+.login-contact:hover{
+  color:blue;
+}
+.login-page-logo{
+  align-self: baseline;
+  margin:0 10%;
+}
+.login-container form{
+  display: flex;
+  flex-direction:column;
+  gap:5%;
+  margin-bottom:10%;
+  font-weight: 600;
+}
+
+input{
+  margin-bottom:10%;
+}
+
+#submit{
+  padding:3%;
+  border-radius: 10px;
+  background-color: #d5d3d0;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transfrom 0.3s ease-in-out;
+}
+#submit:hover{
+  transform:scale(0.9);
+}
+
+
+/********************************************welcome-client***************/
+.welcome-client{
+padding-top:15vh;
+font-size: 1rem;
+font-weight: 800;
+text-align: right;
+background-color: #f196e4;
+color:white;
+}
+
 
   /********************************************************************************Hero section */
   .hero-section{

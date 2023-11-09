@@ -16,12 +16,11 @@ import FAQ from './components/pages/FAQs/FAQ';
 import Booking from './components/pages/Booking';
 import Footer from './components/layout/Footer';
 
+
 function App() {
   return (
     <div className="App">
-   
         <NavBar />
-       
         <Hero/>
         <ServiceDescription/>
         <DetailedServiceDescription/>
@@ -34,7 +33,6 @@ function App() {
         <FAQ />
         <Booking/>
         <Footer/>
-     
     </div>
   );
 }
