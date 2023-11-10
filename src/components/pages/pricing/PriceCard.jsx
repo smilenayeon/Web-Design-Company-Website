@@ -1,33 +1,55 @@
-import React from 'react'
-
+import React from "react";
 
 function PriceCard(props) {
-    const details= props.details;
+  const details = props.details;
   return (
     <div className="price-card">
-   <img className="price-card-image" src={props.image} alt={props.alt}/>
-    <h1 className="price-card-title">{props.title}</h1>
-    <p className="price-card-description">{props.description}</p>
-   <div className="price-container">
-        <h2>{props.price}</h2>
+      <img className="price-card-image" src={props.image} alt={props.alt} />
+      <h1 className="price-card-title">
+        {props.title}
+      </h1>
+      <p className="price-card-description">
+        {props.description}
+      </p>
+      <div className="price-container">
+        <h2>
+          {props.price}
+        </h2>
         <div className="monthly-price">
-        <h3 >{props.currency}</h3>
-        <h3 >{props.unit}</h3>
+          <h3>
+            {props.currency}
+          </h3>
+          <h3>
+            {props.unit}
+          </h3>
         </div>
-    </div>
-    <h3 className="extra-info">{props.extra}</h3>
-    <ul>
-        {details.map((detail,index)=><li key={index} className="price-card-details"><i className="fa-solid fa-circle-check"></i><div className="detail-text">{detail}</div></li>)}
-    </ul>
-    <button className="price-card-button">
+      </div>
+      <h3 className="extra-info">
+        {props.extra}
+      </h3>
+      <ul>
+        {details.map((detail, index) =>
+          <li key={index} className="price-card-details">
+            <i className="fa-solid fa-circle-check" />
+            <div className="detail-text">
+              {detail}
+            </div>
+          </li>
+        )}
+      </ul>
+      <button className="price-card-button">
         {props.button}
-    </button>
-    <div className="price-card-footer">
-        <a className="book" href="https://calendly.com/dflighty/15min?month=2023-11">{props.footer}</a>
+      </button>
+      <div className="price-card-footer">
+        <a
+          className="book"
+          href="https://calendly.com/dflighty/15min?month=2023-11"
+        >
+          {props.footer}
+        </a>
+      </div>
     </div>
-
-    </div>
-  )
+  );
 }
 
-export default PriceCard
+export default PriceCard;
