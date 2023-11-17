@@ -39,6 +39,7 @@ function NavBar() {
   };
 
   const toggleLogin = () => {
+    window.scrollTo(0, 0);
     setMenuOpen(false);
     if (isAuthenticated) {
       logout();
@@ -101,7 +102,7 @@ function NavBar() {
           <li onClick={closeMenu}>
             <a
               className="contact"
-              href="mailto:someone@example.com?subject=The%20Subject&body=Hello%2C%20let's%20talk!"
+              href="mailto:someone@example.com?subject=Let's%20work%20together&body=Hello%2C%20let's%20talk!"
             >
               Contact
             </a>
