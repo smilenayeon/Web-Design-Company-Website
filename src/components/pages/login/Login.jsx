@@ -12,6 +12,7 @@ function Login({ showLogin, setShowLogin, isLoggedIn, setIsLoggedIn }) {
     if (clientCode === "client001" && password === "1234") {
       login({ user: clientCode });
       setShowLogin(false);
+      alert(`Welcome back ${clientCode}`);
     } else {
       alert("Please check your client code and password again.");
     }
